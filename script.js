@@ -18,6 +18,9 @@ function drawSnake(){
 
         p.style.backgroundColor = "#8F3700";
     }
+
+    let t = document.getElementById('PartSnake').rows[fruit.row].cells[fruit.column];
+    t.style.backgroundColor = "red";
 }
 
 function moveSnake(){
