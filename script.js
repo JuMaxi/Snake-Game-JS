@@ -15,8 +15,8 @@ function drawSnake(){
     for(let i = 0; i < snakeParts.length; i++){
         let snake = snakeParts[i];
         let p = document.getElementById('PartSnake').rows[snake.row].cells[snake.column];
-
-        p.style.backgroundColor = "#8F3700";
+        if(!(p === undefined))
+          p.style.backgroundColor = "#8F3700";
     }
 
     let t = document.getElementById('PartSnake').rows[fruit.row].cells[fruit.column];
@@ -101,8 +101,8 @@ function checkSnakeHeadHitSnakeBody(){
   for(let i = 0; i < snakeParts.length -1; i++){
     if(snakeParts[snakeParts.length - 1].row == snakeParts[i].row
       && snakeParts[snakeParts.length - 1].column == snakeParts[i].column){
-      alert("Game over :(");
       clearInterval(interval);
+      alert("Game over :(");
     }
   }
 }
@@ -118,9 +118,9 @@ function checkTableLimits(){
     || snakeParts[snakeParts.length - 1].row == -1
     || snakeParts[snakeParts.length - 1].column == -1)
     {
-      alert("Game over :(");
       clearInterval(interval);
-  }
+      alert("Game over :(");
+    }
 }
 const mainFunction = () => {
   moveSnake();
@@ -137,14 +137,14 @@ const mainFunction = () => {
   drawSnake();
 };
 
-function CheckMobile(){
+function checkMobile(){
   if (/Android|iPhone/i.test(navigator.userAgent)) {
-    let directions = document.getElementsById('mobile-controls');
+    let directions = document.getElementById('mobile-controls');
     directions.style.display='block';
   }  
 }
 function startGame(){
-  CheckMobile();
+  checkMobile();
   interval = setInterval(mainFunction, 150);
   newFruit();
 
