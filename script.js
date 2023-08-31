@@ -20,7 +20,7 @@ function drawSnake(){
     }
 
     let t = document.getElementById('PartSnake').rows[fruit.row].cells[fruit.column];
-    t.style.backgroundColor = "red";
+    t.innerHTML = "<span>🍎</span>"
 }
 
 function moveSnake(){
@@ -84,7 +84,7 @@ function newFruit(){
   }
   else{
     let t = document.getElementById('PartSnake').rows[fruit.row].cells[fruit.column];
-    t.style.backgroundColor = "red";
+    t.innerHTML = "<span>🍎</span>"
   }
 }
 
@@ -125,6 +125,8 @@ function checkTableLimits(){
 const mainFunction = () => {
   moveSnake();
   if(gotFruit()){
+    let t = document.getElementById('PartSnake').rows[fruit.row].cells[fruit.column];
+    t.innerHTML = "";
     sumScore();
     newFruit();
   }

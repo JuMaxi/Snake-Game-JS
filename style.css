@@ -33,16 +33,13 @@ table {
 }
 
 th, td {
-  padding: 10px 8px;
+  padding: 1px 1px;
+  width: 20px;
+  height: 16px;
 }
 
-td
-{
-  width: 8px;
-}
-
-th {
-  text-align: center;
+span{
+  font-size: 15px;
 }
 
 .center {
@@ -57,11 +54,11 @@ footer {
     font-size: 12px;
 }
 
-    footer a {
-        text-decoration: none;
-        color: black;
-    }
+footer a {
+    text-decoration: none;
+    color: black;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+footer a:hover {
+    text-decoration: underline;
+}
