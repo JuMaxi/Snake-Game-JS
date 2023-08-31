@@ -50,7 +50,8 @@ span{
 
 #up, #down, #right, #left{
   background-color: white;
-  padding: 0px;
+  padding: 2px;
+  border: 4px;
 }
 footer {
     text-align: center;
