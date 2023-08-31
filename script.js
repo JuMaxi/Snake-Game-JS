@@ -141,4 +141,7 @@ function startGame(){
 
   let hide = document.getElementsByTagName('button')[0];
   hide.style.display = "none";
+
+  let hideinstructions = document.getElementById('instructions');
+  hideinstructions.style.display = "none";
 }
