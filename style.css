@@ -47,6 +47,11 @@ span{
   justify-content: center;
   text-align:center;
 }
+
+#up, #down, #right, #left{
+  background-color: white;
+  padding: 0px;
+}
 footer {
     text-align: center;
     font-style: italic;
@@ -61,4 +66,8 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+#mobile-controls{
+  display: none;
 }

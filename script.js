@@ -60,7 +60,7 @@ function deleteTail(tail){
 }
 
 document.addEventListener("keydown", function(event) {
-  switch (event.keyCode) {
+  switch (event.keyCode) {    
     case 38: // Up arrow key - less one row
       snakeDirection = 1;
       break;
@@ -137,7 +137,14 @@ const mainFunction = () => {
   drawSnake();
 };
 
+function CheckMobile(){
+  if (/Android|iPhone/i.test(navigator.userAgent)) {
+    let directions = document.getElementsById('mobile-controls');
+    directions.style.display='block';
+  }  
+}
 function startGame(){
+  CheckMobile();
   interval = setInterval(mainFunction, 150);
   newFruit();
 
